@@ -1,1 +1,1 @@
-$(document).ready(function () {   alert('worked') });
+// $(document).ready(function () {   alert('worked') });

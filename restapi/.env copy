@@ -1,0 +1,6 @@
+RDS_NAME = postgres
+RDS_USER = landolabrum
+RDS_PASSWORD = 1Wasatch!
+RDS_HOST = deepturndb.cm3eq8aj4hqw.us-west-1.rds.amazonaws.com
+RDS_PORT = 5432
+SECRET_KEY = _5eoj(9$#ay92te333ge(f9=0q41wp)p&-s4=8jrrc=v^drvuh
