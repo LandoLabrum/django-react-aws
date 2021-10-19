@@ -27,12 +27,14 @@ SECRET_KEY = '_5eoj(9$#ay92te333ge(f9=0q41wp)p&-s4=8jrrc=v^drvuh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['18.144.78.59']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'product',
+    'lead',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'product',
     'django_filters',
     'corsheaders'
 ]
@@ -62,7 +63,8 @@ ROOT_URLCONF = 'restapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [BASE_DIR + "/templates", ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,4 +143,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
